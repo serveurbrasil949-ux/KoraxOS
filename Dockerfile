@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-# Installation des paquets et dépendances nécessaires
+# Installation des paquets nécessaires
 RUN apt-get update && apt-get install -y \
     python3 \
     ttyd \
@@ -12,10 +12,9 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . /app
 
-# Variable de port gérée par Render
-ENV PORT=8080
-EXPOSE 8080
+# Port par défaut si la variable PORT n'est pas définie
+ENV PORT=10000
 
-# Lancer ttyd directement sur le port principal avec l'index HTML personnalisé
-CMD ttyd -p $PORT -i index.html -W bash
+# Lancement de ttyd en utilisant la variable $PORT de Render
+CMD ttyd -p ${PORT:-10000} -i index.html -W bash
 
