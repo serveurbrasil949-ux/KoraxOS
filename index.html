@@ -19,20 +19,16 @@
       <h2>Guide des Commandes</h2>
       <div class="command-list">
         <div class="card">
-          <span class="cmd-name">pkg update</span>
-          <p>Mettre à jour tous les paquets du système.</p>
+          <span class="cmd-name">apt update</span>
+          <p>Mettre à jour les paquets du système Linux.</p>
         </div>
         <div class="card">
-          <span class="cmd-name">pkg install python -y</span>
-          <p>Installer le langage Python.</p>
+          <span class="cmd-name">apt install python3 -y</span>
+          <p>Installer Python 3.</p>
         </div>
         <div class="card">
-          <span class="cmd-name">pkg install nodejs -y</span>
-          <p>Installer Node.js pour exécuter des bots JS.</p>
-        </div>
-        <div class="card">
-          <span class="cmd-name">termux-setup-storage</span>
-          <p>Accéder aux fichiers de la mémoire interne.</p>
+          <span class="cmd-name">apt install nodejs -y</span>
+          <p>Installer Node.js pour exécuter des scripts JS.</p>
         </div>
       </div>
     </section>
@@ -43,23 +39,22 @@
         <span>CONSOLE INTERACTIVE</span>
       </div>
       
-      <!-- Barre d'outils et de touches rapides -->
+      <!-- Barre de touches virtuelles -->
       <div class="virtual-keyboard">
-  <button onclick="pasteToTerminal()">📋 Coller</button>
-  <button onclick="sendKey('\x0f')">CTRL+O (Sauvegarder)</button>
-  <button onclick="sendKey('\x18')">CTRL+X (Quitter)</button>
-  <button onclick="sendKey('\r')">↵ Entrée</button>
-  <button onclick="sendKey('\x03')">CTRL+C</button>
-  <button onclick="sendKey('\x09')">TAB</button>
-  <button onclick="sendKey('\x1b')">ESC</button>
-  <button onclick="sendKey('\x1b[A')">⬆️</button>
-  <button onclick="sendKey('\x1b[B')">⬇️</button>
-</div>
+        <button onclick="pasteToTerminal()">📋 Coller</button>
+        <button onclick="sendKey('\x0f')">CTRL+O (Sauvegarder)</button>
+        <button onclick="sendKey('\x18')">CTRL+X (Quitter)</button>
+        <button onclick="sendKey('\r')">↵ Entrée</button>
+        <button onclick="sendKey('\x03')">CTRL+C</button>
+        <button onclick="sendKey('\x09')">TAB</button>
+        <button onclick="sendKey('\x1b')">ESC</button>
+        <button onclick="sendKey('\x1b[A')">⬆️</button>
+        <button onclick="sendKey('\x1b[B')">⬇️</button>
+      </div>
 
-
-      <!-- Cadre du Terminal ttyd -->
+      <!-- Cadre du Terminal relatif -->
       <div class="iframe-container">
-        <iframe id="termFrame" src="http://localhost:8081"></iframe>
+        <iframe id="termFrame" src="/"></iframe>
       </div>
     </section>
   </main>

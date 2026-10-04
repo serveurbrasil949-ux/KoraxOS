@@ -1,19 +1,21 @@
 FROM ubuntu:latest
 
-# Installation des outils de base, Python et ttyd
+# Installation des paquets et dépendances nécessaires
 RUN apt-get update && apt-get install -y \
     python3 \
     ttyd \
     bash \
     curl \
-    git
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY . /app
 
-# Exposer le port de communication
+# Variable de port gérée par Render
+ENV PORT=8080
 EXPOSE 8080
 
-# Lancer ttyd et le serveur web
-CMD ttyd -p 8081 -W bash & python3 -m http.server 8080
+# Lancer ttyd directement sur le port principal avec l'index HTML personnalisé
+CMD ttyd -p $PORT -i index.html -W bash
 
