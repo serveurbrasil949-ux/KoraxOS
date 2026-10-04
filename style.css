@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #050508;
+  color: #e0e0e0;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff0055;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  color: #00f0ff;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+header h1 span {
+  color: #ff0055;
+}
+
+header p {
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Style des cartes de commandes */
+.guide-section {
+  background: #0a0a10;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.guide-section h2 {
+  color: #00f0ff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.command-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.card {
+  background: #12121c;
+  padding: 8px;
+  border-left: 3px solid #ff0055;
+  border-radius: 4px;
+}
+
+.cmd-name {
+  color: #00f0ff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.card p {
+  font-size: 11px;
+  color: #cccccc;
+}
+
+/* Style du Terminal */
+.terminal-section {
+  background: #0a0a10;
+  border: 1px solid #ff0055;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #ff0055;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Clavier virtuel */
+.virtual-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: #000000;
+  padding: 6px;
+  border-bottom: 1px solid #333;
+}
+
+.virtual-keyboard button {
+  background-color: #1a1a24;
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+.virtual-keyboard button:active {
+  background-color: #ff0055;
+  color: #ffffff;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 60vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
